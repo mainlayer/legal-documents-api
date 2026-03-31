@@ -53,8 +53,8 @@ app = FastAPI(
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc",
-    contact={"name": "Mainlayer Support", "url": "https://api.mainlayer.xyz"},
-    license_info={"name": "Commercial", "url": "https://api.mainlayer.xyz/legal"},
+    contact={"name": "Mainlayer Support", "url": "https://api.mainlayer.fr"},
+    license_info={"name": "Commercial", "url": "https://api.mainlayer.fr/legal"},
 )
 
 app.add_middleware(
@@ -99,7 +99,7 @@ async def root():
             "categories": "FREE",
         },
         "auth": "Authorization: Bearer <api_key>",
-        "info": "https://api.mainlayer.xyz",
+        "info": "https://api.mainlayer.fr",
     }
 
 

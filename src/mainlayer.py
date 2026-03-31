@@ -1,7 +1,7 @@
 """
 Mainlayer payment integration — Stripe for AI agents.
 Handles pay-per-request billing via the Mainlayer API.
-Base URL: https://api.mainlayer.xyz
+Base URL: https://api.mainlayer.fr
 """
 
 import os
@@ -13,7 +13,7 @@ from fastapi.responses import JSONResponse
 
 logger = logging.getLogger(__name__)
 
-MAINLAYER_BASE_URL = "https://api.mainlayer.xyz"
+MAINLAYER_BASE_URL = "https://api.mainlayer.fr"
 MAINLAYER_API_KEY = os.getenv("MAINLAYER_API_KEY", "")
 SERVICE_ID = os.getenv("MAINLAYER_SERVICE_ID", "legal-documents-api")
 
@@ -166,7 +166,7 @@ async def require_payment(
                 "message": result.get("error", "Payment verification failed"),
                 "amount_usd": amount_usd,
                 "resource_id": resource_id,
-                "info": "Visit https://api.mainlayer.xyz to manage your account",
+                "info": "Visit https://api.mainlayer.fr to manage your account",
             },
         )
 
